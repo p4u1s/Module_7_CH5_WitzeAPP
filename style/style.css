@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  display: flex;
+  background-color: rgb(49, 47, 47);
+  justify-content: center;
+}
+
+.section-heading {
+  display: flex;
+  color: green;
+  background-color: rgb(49, 47, 47);
+  justify-content: center;
+}
+.section-heading__heading {
+  font-family: "Rubik Scribble";
+  color: lightgreen;
+  text-size: 20;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-joke {
+  background-color: rgb(83, 81, 81);
+  margin: 0, 0, 0;
+  height: 20px;
+  width: 70%;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  background-color: rgb(49, 47, 47);
+}
+.current-joke__text {
+  text-align: left;
+  margin: auto;
+}
+.current-joke_current-joke__button-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.current-joke_current-joke__button-container__buttons {
+  background-color: lightgreen;
+}
+.saved-jokes {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

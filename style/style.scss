@@ -1,0 +1,53 @@
+@use "colors";
+@use "fonts";
+
+body {
+  display: flex;
+  background-color: colors.$bg-dark;
+  justify-content: center;
+}
+
+.section-heading {
+  display: flex;
+  color: colors.$h1-color;
+  background-color: colors.$bg-dark;
+  justify-content: center;
+  &__heading {
+    font-family: fonts.$h1-font;
+    color: colors.$text-color;
+    text-size: 20;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.current-joke {
+  background-color: colors.$bg-light;
+  margin: 0, 0, 0;
+  height: 20px;
+  width: 70%;
+  justify-content: center;
+
+  font-family: fonts.$text-font;
+  background-color: colors.$bg-dark;
+
+  &__text {
+    text-align: left;
+    margin: auto;
+  }
+  &_current-joke__button-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    &__buttons {
+      background-color: colors.$text-color;
+    }
+    &_current-joke__buttons--inverted {
+    }
+  }
+}
+
+.saved-jokes {
+  margin-top: 1rem;
+}
