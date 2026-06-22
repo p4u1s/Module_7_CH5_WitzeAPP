@@ -9,19 +9,17 @@
   </head>
 
   <body>
-    <section class="section-heading">
-        <h1 class="section-heading__heading">Witze App</h1>
+    <section class="heading-section">
+      <h1 class="heading-section__heading">Witze App</h1>
     </section>
 
     <section class="current-joke">
       <div class="current-joke__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
         laborum libero illo odit delectus perferendis.
-        <div class="current-joke current-joke__button-container">
-          <button class="current-joke current-joke__buttons">
-            Neuen Witz laden
-          </button>
-          <button class="current-joke current-joke__buttons--inverted">
+        <div class="current-joke__button-container">
+          <button class="current-joke__buttons">Neuen Witz laden</button>
+          <button class="current-joke__buttons--inverted">
             Witz speichern
           </button>
         </div>
@@ -29,18 +27,20 @@
     </section>
 
     <section class="saved-jokes">
-      <div class="saved-jokes saved-jokes__heading">
-        <h2>Gespeicherte Witze</h2>
+      <div>
+        <h2 class="saved-jokes__heading">Gespeicherte Witze</h2>
       </div>
-      <div class="saved-jokes__joke">
-        Witz 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Corporis, possimus.
-        <button>Unsave</button>
-      </div>
-      <div class="saved-jokes__joke">
-        Witz 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Corporis, possimus.
-        <button>Unsafe</button>
+      <div class="saved-jokes__list">
+        <div class="saved-jokes__joke">
+          Witz 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Corporis, possimus.
+          <button>Unsave</button>
+        </div>
+        <div class="saved-jokes__joke">
+          Witz 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Corporis, possimus.
+          <button>Unsafe</button>
+        </div>
       </div>
     </section>
 
