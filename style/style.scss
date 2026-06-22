@@ -3,11 +3,12 @@
 
 body {
   display: flex;
+  flex-direction: column;
   background-color: colors.$bg-dark;
   justify-content: center;
 }
 
-.section-heading {
+.heading-section {
   display: flex;
   color: colors.$h1-color;
   background-color: colors.$bg-dark;
@@ -22,32 +23,39 @@ body {
 }
 
 .current-joke {
+  display: flex;
   background-color: colors.$bg-light;
-  margin: 0, 0, 0;
-  height: 20px;
-  width: 70%;
   justify-content: center;
-
   font-family: fonts.$text-font;
-  background-color: colors.$bg-dark;
+  background-color: colors.$bg-light;
+  padding: auto;
 
   &__text {
     text-align: left;
     margin: auto;
   }
-  &_current-joke__button-container {
+  &__button-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
-
-    &__buttons {
-      background-color: colors.$text-color;
-    }
-    &_current-joke__buttons--inverted {
-    }
+  }
+  &__buttons {
+    background-color: green;
+  }
+  &__buttons--inverted {
+    background-color: colors.$bg-dark;
+    textcolor: colors.$text-color;
   }
 }
 
 .saved-jokes {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__heading {
+    font-family: fonts.$h2-font;
+    color: colors.$text-color;
+  }
+  &__button {
+  }
 }

@@ -2,17 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
   display: flex;
+  flex-direction: column;
   background-color: rgb(49, 47, 47);
   justify-content: center;
 }
 
-.section-heading {
+.heading-section {
   display: flex;
   color: green;
   background-color: rgb(49, 47, 47);
   justify-content: center;
 }
-.section-heading__heading {
+.heading-section__heading {
   font-family: "Rubik Scribble";
   color: lightgreen;
   text-size: 20;
@@ -21,28 +22,38 @@ body {
 }
 
 .current-joke {
+  display: flex;
   background-color: rgb(83, 81, 81);
-  margin: 0, 0, 0;
-  height: 20px;
-  width: 70%;
   justify-content: center;
   font-family: "Inter", sans-serif;
-  background-color: rgb(49, 47, 47);
+  background-color: rgb(83, 81, 81);
+  padding: auto;
 }
 .current-joke__text {
   text-align: left;
   margin: auto;
 }
-.current-joke_current-joke__button-container {
+.current-joke__button-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
-.current-joke_current-joke__button-container__buttons {
-  background-color: lightgreen;
+.current-joke__buttons {
+  background-color: green;
 }
+.current-joke__buttons--inverted {
+  background-color: rgb(49, 47, 47);
+  textcolor: lightgreen;
+}
+
 .saved-jokes {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.saved-jokes__heading {
+  font-family: "Rubik Scribble";
+  color: lightgreen;
 }
 
 /*# sourceMappingURL=style.css.map */
