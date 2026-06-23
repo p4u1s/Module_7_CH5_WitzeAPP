@@ -1,17 +1,143 @@
-/* Error: Undefined variable.
- *    ,
- * 11 |   color: $text-color;
- *    |          ^^^^^^^^^^^
- *    '
- *   style\style.scss 11:10  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 11 \2502    color: $text-color;\d\a    \2502           ^^^^^^^^^^^\a    \2575 \a   style\\style.scss 11:10  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*reset*/
+* {
+  margin: 0;
+  paddin: 0;
 }
+
+body {
+  background-color: rgb(49, 47, 47);
+  color: rgb(255, 255, 255);
+}
+
+#app {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  #app {
+    margin-top: 4rem;
+  }
+}
+
+.heading-section {
+  color: rgb(33, 192, 33);
+}
+.heading-section__heading {
+  font-family: "Rubik Scribble", cursive;
+  font-size: 60px;
+}
+
+.current-joke {
+  background-color: rgb(83, 81, 81);
+  font-family: "Inter", sans-serif;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+@media only screen and (min-width: 600px) {
+  .current-joke {
+    margin-top: 4rem;
+    width: 100%;
+  }
+}
+.current-joke__text {
+  font-size: 1.2rem;
+}
+.current-joke__button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 600px) {
+  .current-joke__button-container {
+    flex-direction: row;
+  }
+}
+.current-joke__button-generate, .current-joke__button-save {
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgb(33, 192, 33);
+  border-radius: 4px;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+.current-joke__button-generate:hover, .current-joke__button-save:hover {
+  background-color: rgb(60.44, 221.56, 60.44);
+  border-color: rgb(60.44, 221.56, 60.44);
+}
+.current-joke__button-generate, .current-joke__button-save:hover {
+  background-color: rgb(33, 192, 33);
+  color: black;
+}
+.current-joke__button-save {
+  background-color: transparent;
+  color: rgb(33, 192, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.current-joke__button-save-icon {
+  width: 1.5rem;
+}
+
+.saved-jokes {
+  margin-top: 4rem;
+}
+@media only screen and (min-width: 600px) {
+  .saved-jokes {
+    margin-top: 6rem;
+  }
+}
+.saved-jokes__heading {
+  font-family: "Rubik Scribble", cursive;
+  font-size: 2rem;
+}
+.saved-jokes__list {
+  gap: 1rem;
+  magrin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.saved-joke {
+  background-color: rgb(83, 81, 81);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .saved-joke {
+    padding: 1.5rem;
+  }
+}
+.saved-joke__button-remove {
+  background-color: rgb(245, 9, 9);
+  border: none;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.saved-joke__button-remove:hover {
+  background-color: rgb(248.6503937008, 82.1496062992, 82.1496062992);
+}
+.saved-joke__button-remove-icon {
+  width: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=style.css.map */

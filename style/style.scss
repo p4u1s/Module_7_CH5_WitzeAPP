@@ -1,7 +1,8 @@
 @use "variables" as *;
+@use "sass:color";
 
 /*reset*/
-*{
+* {
   margin: 0;
   paddin: 0;
 }
@@ -9,91 +10,137 @@
 body {
   background-color: $bg-dark;
   color: $text-color;
+}
+
+#app {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
 
+  @include tablet-and-up() {
+    margin-top: 4rem;
+  }
+}
 .heading-section {
   color: $primary;
-  background-color: $bg-dark;
-  justify-content: center;
   &__heading {
-    font-family: $h1-font;
-    color: $primary;
-    text-size: 20;
-    align-items: center;
-    justify-content: center;
+    font-family: $h-font;
+    font-size: 60px;
   }
 }
 
 .current-joke {
   background-color: $bg-light;
-  justify-content: center;
   font-family: $text-font;
-  padding: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+
+  @include tablet-and-up() {
+    margin-top: 4rem;
+    width: 100%;
+  }
 
   &__text {
-    text-align: left;
-    margin: auto;
-    padding: 2rem;
+    font-size: 1.2rem;
   }
 
   &__button-container {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
     justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+
+    @include tablet-and-up() {
+      flex-direction: row;
+    }
   }
 
-  &__button-generate{
-    background-color: rgb(20, 217, 20);
-    padding: 14px;
-    border: none;
+  &__button-generate,
+  &__button-save {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid $primary;
+    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.scale($primary, $lightness: 20%);
+      border-color: color.scale($primary, $lightness: 20%);
+    }
+  }
+  &__button-generate,
+  &__button-save:hover {
+    background-color: $primary;
+    color: black;
   }
 
-  &__button-save--inverted {
-    border: 2px solid;
-    border-color: $primary;
-    background-color: $bg-light;
+  &__button-save {
+    background-color: transparent;
     color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__button-save-icon {
+    width: 1.5rem;
   }
 }
 
 .saved-jokes {
-  display: flex;
-  flex-direction: column;
+  margin-top: 4rem;
+
+  @include tablet-and-up() {
+    margin-top: 6rem;
+  }
 
   &__heading {
-    font-family: $h2-font;
-
-    align-items: end;
+    font-family: $h-font;
+    font-size: 2rem;
+  }
+  &__list {
+    gap: 1rem;
+    magrin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .saved-joke {
-    background-color: $bg-light;
-    margin: 1rem;
+  background-color: $bg-light;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @include tablet-and-up() {
+    padding: 1.5rem;
+  }
+  &__button-remove {
+    background-color: $danger-color;
+    border: none;
     padding: 0.5rem;
-    border-radius: 1px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
 
-  &__text{
-
+    &:hover {
+      background-color: color.scale($danger-color, $lightness: 30%);
+    }
   }
-
-  &__button {
-
-    background-color: $button;
+  &__button-remove-icon {
+    width: 1.5rem;
+    color: $text-color;
   }
-  &__button-icon{
-
-  }
-}
-
-@media (min-width: 600px) {
-
-}
-
-@media (min-width: 1100px) {
 }

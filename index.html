@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div id="app">
     <section class="heading-section">
       <h1 class="heading-section__heading">Witze App</h1>
     </section>
@@ -21,7 +22,7 @@
           <button class="current-joke__button-generate">
             Neuen Witz laden
           </button>
-          <button class="current-joke__button-save--inverted">
+          <button class="current-joke__button-save">
             <span>Witz speichern</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,17 +49,17 @@
       </div>
       <div class="saved-jokes__list">
         <div class="saved-joke">
-          <div class="saved-joke__text">
+          
             Witz 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Corporis, possimus.
-            <button class="saved-joke__button">
+            <button class="saved-joke__button-remove">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="saved-joke__button-icon"
+                class="saved-joke__button-remove-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -67,18 +68,20 @@
                 />
               </svg>
             </button>
-          </div>
-          <div class="saved-joke__text">
+          
+        </div>
+        <div class="saved-joke">
+          
             Witz 2: Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Corporis, possimus.
-            <button class="saved-joke__button">
+            <button class="saved-joke__button-remove">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="saved-joke__button-icon"
+                class="saved-joke__button-remove-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -87,18 +90,20 @@
                 />
               </svg>
             </button>
-          </div>
-          <div class="saved-joke__text">
+          
+        </div>
+        <div class="saved-joke">
+          
             Witz 3: Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Corporis, possimus.
-            <button class="saved-joke__button">
+            <button class="saved-joke__button-remove">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="saved-joke__button-icon"
+                class="saved-joke__button-remove-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -107,11 +112,12 @@
                 />
               </svg>
             </button>
-          </div>
+          
+        </div>
         </div>
       </div>
     </section>
-
+  </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
