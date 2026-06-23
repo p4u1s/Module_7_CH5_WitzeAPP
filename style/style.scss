@@ -5,17 +5,17 @@ body {
   display: flex;
   flex-direction: column;
   background-color: colors.$bg-dark;
+  align-items: center;
   justify-content: center;
 }
 
 .heading-section {
-  display: flex;
-  color: colors.$h1-color;
+  color: colors.$primary;
   background-color: colors.$bg-dark;
   justify-content: center;
   &__heading {
     font-family: fonts.$h1-font;
-    color: colors.$text-color;
+    color: colors.$primary;
     text-size: 20;
     align-items: center;
     justify-content: center;
@@ -23,39 +23,65 @@ body {
 }
 
 .current-joke {
-  display: flex;
   background-color: colors.$bg-light;
+  color: colors.$secondary;
   justify-content: center;
   font-family: fonts.$text-font;
-  background-color: colors.$bg-light;
   padding: auto;
 
   &__text {
     text-align: left;
     margin: auto;
+    padding: 2rem;
   }
+
   &__button-container {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    justify-content: center;
   }
+
   &__buttons {
-    background-color: green;
+    background-color: rgb(20, 217, 20);
+    padding: 14px;
+    border: none;
   }
+
   &__buttons--inverted {
-    background-color: colors.$bg-dark;
-    textcolor: colors.$text-color;
+    border: 2px solid;
+    border-color: colors.$primary;
+    background-color: colors.$bg-light;
+    color: colors.$primary;
   }
 }
 
 .saved-jokes {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   &__heading {
     font-family: fonts.$h2-font;
-    color: colors.$text-color;
+    color: colors.$secondary;
+    align-items: end;
   }
+  &__joke {
+    background-color: colors.$bg-light;
+    color: colors.$secondary;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1px;
+  }
+
   &__button {
+    color: colors.$secondary;
+    background-color: colors.$button;
   }
+}
+
+@media (min) {
+  
+}
+
+@media (min-width: 1100px) {
 }

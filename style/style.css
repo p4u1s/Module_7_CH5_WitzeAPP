@@ -4,56 +4,72 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgb(49, 47, 47);
+  align-items: center;
   justify-content: center;
 }
 
 .heading-section {
-  display: flex;
-  color: green;
+  color: rgb(33, 192, 33);
   background-color: rgb(49, 47, 47);
   justify-content: center;
 }
 .heading-section__heading {
   font-family: "Rubik Scribble";
-  color: lightgreen;
+  color: rgb(33, 192, 33);
   text-size: 20;
   align-items: center;
   justify-content: center;
 }
 
 .current-joke {
-  display: flex;
   background-color: rgb(83, 81, 81);
+  color: rgb(255, 255, 255);
   justify-content: center;
   font-family: "Inter", sans-serif;
-  background-color: rgb(83, 81, 81);
   padding: auto;
 }
 .current-joke__text {
   text-align: left;
   margin: auto;
+  padding: 2rem;
 }
 .current-joke__button-container {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 .current-joke__buttons {
-  background-color: green;
+  background-color: rgb(20, 217, 20);
+  padding: 14px;
+  border: none;
 }
 .current-joke__buttons--inverted {
-  background-color: rgb(49, 47, 47);
-  textcolor: lightgreen;
+  border: 2px solid;
+  border-color: rgb(33, 192, 33);
+  background-color: rgb(83, 81, 81);
+  color: rgb(33, 192, 33);
 }
 
 .saved-jokes {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .saved-jokes__heading {
   font-family: "Rubik Scribble";
-  color: lightgreen;
+  color: rgb(255, 255, 255);
+  align-items: end;
+}
+.saved-jokes__joke {
+  background-color: rgb(83, 81, 81);
+  color: rgb(255, 255, 255);
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1px;
+}
+.saved-jokes__button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(245, 9, 9);
 }
 
 /*# sourceMappingURL=style.css.map */
