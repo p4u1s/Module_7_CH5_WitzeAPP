@@ -1,75 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(49, 47, 47);
-  align-items: center;
-  justify-content: center;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 11 |   color: $text-color;
+ *    |          ^^^^^^^^^^^
+ *    '
+ *   style\style.scss 11:10  root stylesheet */
 
-.heading-section {
-  color: rgb(33, 192, 33);
-  background-color: rgb(49, 47, 47);
-  justify-content: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 11 \2502    color: $text-color;\d\a    \2502           ^^^^^^^^^^^\a    \2575 \a   style\\style.scss 11:10  root stylesheet";
 }
-.heading-section__heading {
-  font-family: "Rubik Scribble";
-  color: rgb(33, 192, 33);
-  text-size: 20;
-  align-items: center;
-  justify-content: center;
-}
-
-.current-joke {
-  background-color: rgb(83, 81, 81);
-  color: rgb(255, 255, 255);
-  justify-content: center;
-  font-family: "Inter", sans-serif;
-  padding: auto;
-}
-.current-joke__text {
-  text-align: left;
-  margin: auto;
-  padding: 2rem;
-}
-.current-joke__button-container {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-content: center;
-}
-.current-joke__buttons {
-  background-color: rgb(20, 217, 20);
-  padding: 14px;
-  border: none;
-}
-.current-joke__buttons--inverted {
-  border: 2px solid;
-  border-color: rgb(33, 192, 33);
-  background-color: rgb(83, 81, 81);
-  color: rgb(33, 192, 33);
-}
-
-.saved-jokes {
-  display: flex;
-  flex-direction: column;
-}
-.saved-jokes__heading {
-  font-family: "Rubik Scribble";
-  color: rgb(255, 255, 255);
-  align-items: end;
-}
-.saved-jokes__joke {
-  background-color: rgb(83, 81, 81);
-  color: rgb(255, 255, 255);
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 1px;
-}
-.saved-jokes__button {
-  color: rgb(255, 255, 255);
-  background-color: rgb(245, 9, 9);
-}
-
-/*# sourceMappingURL=style.css.map */

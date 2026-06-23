@@ -1,21 +1,27 @@
-@use "colors";
-@use "fonts";
+@use "variables" as *;
+
+/*reset*/
+*{
+  margin: 0;
+  paddin: 0;
+}
 
 body {
+  background-color: $bg-dark;
+  color: $text-color;
   display: flex;
   flex-direction: column;
-  background-color: colors.$bg-dark;
   align-items: center;
   justify-content: center;
 }
 
 .heading-section {
-  color: colors.$primary;
-  background-color: colors.$bg-dark;
+  color: $primary;
+  background-color: $bg-dark;
   justify-content: center;
   &__heading {
-    font-family: fonts.$h1-font;
-    color: colors.$primary;
+    font-family: $h1-font;
+    color: $primary;
     text-size: 20;
     align-items: center;
     justify-content: center;
@@ -23,10 +29,9 @@ body {
 }
 
 .current-joke {
-  background-color: colors.$bg-light;
-  color: colors.$secondary;
+  background-color: $bg-light;
   justify-content: center;
-  font-family: fonts.$text-font;
+  font-family: $text-font;
   padding: auto;
 
   &__text {
@@ -42,17 +47,17 @@ body {
     justify-content: center;
   }
 
-  &__buttons {
+  &__button-generate{
     background-color: rgb(20, 217, 20);
     padding: 14px;
     border: none;
   }
 
-  &__buttons--inverted {
+  &__button-save--inverted {
     border: 2px solid;
-    border-color: colors.$primary;
-    background-color: colors.$bg-light;
-    color: colors.$primary;
+    border-color: $primary;
+    background-color: $bg-light;
+    color: $primary;
   }
 }
 
@@ -61,26 +66,33 @@ body {
   flex-direction: column;
 
   &__heading {
-    font-family: fonts.$h2-font;
-    color: colors.$secondary;
-    align-items: end;
-  }
-  &__joke {
-    background-color: colors.$bg-light;
-    color: colors.$secondary;
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 1px;
-  }
+    font-family: $h2-font;
 
-  &__button {
-    color: colors.$secondary;
-    background-color: colors.$button;
+    align-items: end;
   }
 }
 
-@media (min) {
-  
+.saved-joke {
+    background-color: $bg-light;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1px;
+
+  &__text{
+
+  }
+
+  &__button {
+
+    background-color: $button;
+  }
+  &__button-icon{
+
+  }
+}
+
+@media (min-width: 600px) {
+
 }
 
 @media (min-width: 1100px) {
