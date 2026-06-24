@@ -4,7 +4,7 @@
 /*reset*/
 * {
   margin: 0;
-  paddin: 0;
+  padding: 0;
 }
 
 body {
@@ -106,7 +106,7 @@ body {
   }
   &__list {
     gap: 1rem;
-    magrin-top: 1.5rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
   }
