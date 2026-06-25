@@ -84,6 +84,9 @@ body {
   justify-content: center;
   gap: 0.5rem;
 }
+.current-joke__button-save--disabled {
+  display: none;
+}
 .current-joke__button-save-icon {
   width: 1.5rem;
 }
